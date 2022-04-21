@@ -1,0 +1,203 @@
+/* HIDE RADIO  https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons*/
+/* IMAGE STYLES */
+html{
+    background-color: #cfc29f;
+}
+
+.classIcon + img {
+    cursor: pointer;
+    outline: 2px solid grey;
+}
+
+/* CHECKED STYLES */
+.classIcon:checked + img {
+    outline: 2px solid blue;
+}
+
+.classLabel {
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+    height: auto;
+    float:left;
+}
+
+.filterLabel {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    width: 165px;
+    float: left;
+    padding: 5px;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: blue !important;
+    color: #ffffff;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.classIcon {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.filterButton{
+    padding:5px 15px;
+    background:#ccc;
+    font-size: x-large;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.resetButton{
+    padding:5px 15px;
+    background: none;
+    border:0 none;
+    cursor:pointer;
+    font-size: medium;
+}
+
+.filterButton:hover{
+    padding:5px 15px;
+    background:lightskyblue;
+    font-size: x-large;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.resetButton:hover{
+    color: blue;
+    padding:5px 15px;
+    background: none;
+    border:0 none;
+    cursor:pointer;
+    font-size: medium;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    float: left;
+    font-family: arial, sans-serif;
+}
+
+th{
+    background-color: silver;
+    text-align: center;
+}
+td{
+    background-color: white;
+}
+
+tr{
+    height: 50px;
+}
+
+.spaceUnderneath{
+    padding-bottom: 1em;
+}
+
+table tr:hover td {
+    background-color: lightskyblue;
+}
+
+.hidden_row {
+    display: none;
+}
+
+.spacer{
+    border: 0px transparent;
+    background: transparent;
+    height:25px;
+}
+
+@media only screen and (max-device-width: 1130px) and (min-device-width: 0px) {
+    .filters{
+        width: 100%;
+        float: left;
+    }
+
+    .classFilters{
+        width: 100%;
+        float: left;
+    }
+
+    .submitButton {
+        width: 100%;
+        float: left;
+    }
+
+    .otherFilters{
+        display: inline-block;
+        width: 100%;
+        float: left;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        float: left;
+        width: 100%;
+        height: auto;
+        order: 5;
+    }
+    #table{
+        float: left;
+        height: auto;
+        padding-top: 20px;
+        padding-left: 10px;
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media only screen and (min-device-width: 1130px){
+    .filters{
+        width: 900px;
+        float: left;
+    }
+
+    .classFilters{
+        width: 80%;
+        float: left;
+    }
+
+    .submitButton {
+        width: 20%;
+        float: left;
+    }
+
+    .otherFilters{
+        display: inline-block;
+        width: 80%;
+        float: left;
+    }
+    .contact{
+        float: left;
+        width: 20%;
+        height: auto;
+    }
+    #table{
+        float: left;
+        height: auto;
+        padding-top: 20px;
+        padding-left: 10px;
+        width: 70%;
+    }
+}
